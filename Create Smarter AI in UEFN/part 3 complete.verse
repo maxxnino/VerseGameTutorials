@@ -142,7 +142,7 @@ target := class:
 guard_state := enum{Roaming, Chasing, Attacking}
 
 # A Verse-authored creative device that can be placed in a level
-guard_ai_device:= class<concrete>():
+guard_ai_device := class(creative_device):
     @editable
     GuardSpawner : guard_spawner_device = guard_spawner_device{}
     var GuardAiMap: [agent]guard_ai = map{}
